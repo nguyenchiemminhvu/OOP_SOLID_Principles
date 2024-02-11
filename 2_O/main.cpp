@@ -1,7 +1,7 @@
 /**
  * @brief Demonstration of the Open/Closed principle in OOP design.
- * The Single Responsibility Principle (SRP) states that a class should have only one reason to change, 
- * or in other words, it should have only one job or responsibility.
+ * The Open/Closed principle states that software entities should be open for extension, but closed for modification.
+ * This allows new functionality to be added without changing existing source code.
  */
 
 #include <stdio.h>
@@ -9,7 +9,12 @@
 #include <string.h>
 #include <pthread.h>
 
+#include "compliant.h"
+
 int main()
 {
+	ClientApplication app;
+	app.setDREngine(new IMU_System());
+	app.updatePosition();
 	return 0;
 }
