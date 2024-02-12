@@ -1,7 +1,7 @@
 /**
  * @brief Demonstration of the Liskov substituation principle in OOP design.
- * The Single Responsibility Principle (SRP) states that a class should have only one reason to change, 
- * or in other words, it should have only one job or responsibility.
+ * The Liskov Substituation Principle (SRP) states that objects of a superclass should be replaceable with objects of its subclass without affecting the correctness of the program.
+ * This means that a subclass should be able to substitute its parent class without changing the behavior of the program.
  */
 
 #include <stdio.h>
@@ -9,7 +9,11 @@
 #include <string.h>
 #include <pthread.h>
 
+#include "compliant.h"
+
 int main()
 {
+	DrEngine engine;
+	engine.updatePosition();
 	return 0;
 }
